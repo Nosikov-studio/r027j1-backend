@@ -5,16 +5,12 @@ module.exports = async (req, res) => {
     const userSession = sessions[sessionId];
 
     if (!userSession) {
-        return res.status(401).send('Invalid session');
+        return res.status(401).json({message: "Invalid session"});
     }
 
     const userId = userSession.userId;
-    res.send(
-    //     {
-    //     // id: 1,
-    //     // userId,        
-    // }
-'просто текст'
+    res.json(
+    {message: "hello from test"}
 
 )
 }
