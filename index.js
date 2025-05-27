@@ -6,7 +6,14 @@ const cors = require('cors');
 
 
 const app=express();
-app.use(cors());
+const corsOptions = {
+  origin: 'http://truruky.ru',  // ваш фронтенд домен
+  credentials: true,            // разрешаем куки
+};
+
+app.use(cors(corsOptions));
+// app.use(cors());
+
 app.use(express.json());
 
 app.post('/login', login);
