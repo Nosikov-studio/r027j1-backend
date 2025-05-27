@@ -4,9 +4,9 @@ const test = require('./routes/test');
 const logout = require('./routes/logout');
 const cors = require('cors');
 
-app.use(cors());
-const app=express();
 
+const app=express();
+app.use(cors());
 app.use(express.json());
 
 app.post('/login', login);
