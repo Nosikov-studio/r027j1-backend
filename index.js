@@ -11,4 +11,5 @@ app.post('/login', login);
 app.post('/test', test);
 app.post('/logout', logout);
 
-app.listen(50555);
+app.listen(40444, () => {
+        console.log('Сервер запущен на порту 40444')});
