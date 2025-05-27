@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
     const {username, password} = req.body;
 
     if (username !== "admin" || password !== "admin") {
-        return res.status(403).send("authentication failed")
+        return res.status(403).json({message: "authentication failed"})
     }
 
     const sessionId = uuid();
