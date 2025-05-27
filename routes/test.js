@@ -3,15 +3,15 @@ const sessions = require('../sessions');
 module.exports = async (req, res) => {
 
 // улучшенная обработка кук
-const cookies = req.headers.cookie?.split(';').reduce((acc, cookie) => {
-const [name, value] = cookie.trim().split('=');
-acc[name] = value;
-return acc;
-}, {});
-const sessionId = cookies?.sessionId;   
+// const cookies = req.headers.cookie?.split(';').reduce((acc, cookie) => {
+// const [name, value] = cookie.trim().split('=');
+// acc[name] = value;
+// return acc;
+// }, {});
+// const sessionId = cookies?.sessionId;   
     
     
-    // const sessionId = req.headers.cookie?.split("=")[1];
+    const sessionId = req.headers.cookie?.split("=")[1];
     const userSession = sessions[sessionId];
 
     if (!userSession) {
