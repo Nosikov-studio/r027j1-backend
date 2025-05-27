@@ -16,5 +16,5 @@ module.exports = async (req, res) => {
     res.cookie("session", sessionId, {
         httpOnly: true,
     })
-    res.send("Success!");
+    res.send("Success!!!");
 }
