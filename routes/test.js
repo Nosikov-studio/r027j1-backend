@@ -9,9 +9,12 @@ module.exports = async (req, res) => {
     }
 
     const userId = userSession.userId;
-    res.send({
-        // id: 1,
-        // userId,
-        'просто текст'
-    })
+    res.send(
+    //     {
+    //     // id: 1,
+    //     // userId,        
+    // }
+'просто текст'
+
+)
 }
