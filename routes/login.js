@@ -15,6 +15,7 @@ module.exports = async (req, res) => {
 
     res.cookie("session", sessionId, {
         httpOnly: true,
+        secure: true,        // требует HTTPS
         sameSite: 'none',
     })
     res.json({message: "!!!!!!!Success!!!!!!!+++"});

@@ -15,7 +15,7 @@ app.use(cors(corsOptions));
 // app.use(cors());
 
 app.use(express.json());
-
+app.get('/', (req, res) => {res.send("hello from backend")});
 app.post('/login', login);
 app.post('/test', test);
 app.post('/logout', logout);
