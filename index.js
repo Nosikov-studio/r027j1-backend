@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const app=express();
 const corsOptions = {
-  origin: 'http://truruky.ru',  // ваш фронтенд домен
+  origin: 'https://truruky.ru',  // ваш фронтенд домен
   credentials: true,            // разрешаем куки
 };
 
